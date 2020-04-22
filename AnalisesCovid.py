@@ -71,13 +71,8 @@ numpy.save('man_obs.npy', [series.values[-1]])
 
 
 
-
-coef = numpy.load('man_model.npy')
-print(coef)
-lag = numpy.load('man_data.npy')
-print(lag)
 last_ob = numpy.load('man_obs.npy')
-print(last_ob)
+print("Ultima Obeservação: %i" % last_ob)
 
 # carregua o modelo de AR do arquivo e faz uma previsão em uma etapa
 
@@ -98,7 +93,7 @@ for j in range(NumeroDePrevisoes):
     prediction = predict(coef, lag)
     # Tranforma a predição
     yhat = prediction + last_ob[0]
-    print('Prediction: %f' % yhat)
+    print('Predição: %f' % yhat)
 
     
     # Pega a opservação prevista
