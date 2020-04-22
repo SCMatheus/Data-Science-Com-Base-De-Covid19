@@ -5,13 +5,12 @@ from statsmodels.tsa.ar_model import AR
 from datetime import timedelta 
 import warnings
 from datetime import datetime
-import matplotlib.pyplot as plt
 
 
 
-Mundial = True
+Mundial = False
 NumeroDePrevisoes = 10
-Pais = 'US'
+Pais = 'China'
 
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
