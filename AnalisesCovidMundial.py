@@ -29,14 +29,17 @@ for i in range(len(data.columns)):
     totalDeCasosPorDia = totalDeCasosPorDia.append({'Data' :  dataIndex, 'Casos' : soma} , ignore_index=True)
 
 totalDeCasosPorDia.to_csv('CasosDoMundo.csv')
-Base = pd.read_csv('CasosDoMundo.csv', index_col='Data')
+Base = pd.read_csv('CasosDoMundo.csv', parse_dates=['Data'], index_col='Data')
 Base.drop('Unnamed: 0', inplace=True, axis=1)
 
+filtro  = Base > 0
+Base = Base[filtro]
+Base = Base.dropna()
 
 dataFinal = Base
 
 tamanho = dataFinal.size
-ultimaData = totalDeCasosPorDia.iloc[tamanho-1].Data
+ultimaData = dataFinal.last_valid_index()
 
 
 
