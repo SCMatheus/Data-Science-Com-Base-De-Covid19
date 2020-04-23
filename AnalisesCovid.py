@@ -10,7 +10,7 @@ from datetime import datetime
 
 Mundial = False
 NumeroDePrevisoes = 10
-Pais = 'China'
+Pais = 'Brazil'
 
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
@@ -113,7 +113,8 @@ for j in range(NumeroDePrevisoes):
     
     Dado = {'Casos' : yhat[0]}
     dataFinal = dataFinal.append(pd.DataFrame(Dado,index=[ultimaData]))
-    
+
+
 Base.plot(color='red')
 dataFinal.plot()
 pyplot.show()
