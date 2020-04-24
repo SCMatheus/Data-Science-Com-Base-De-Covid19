@@ -1,6 +1,6 @@
 # Data Science Com Base De Covid19
 
-Um programa simples feito para prever o número de casos de pessoas infectadas por coronavírus tanto por país quanto mundialmente.
+Um programa simples feito para prever o número de casos de pessoas infectadas, mortes e recuperados por coronavírus tanto por país quanto mundialmente.
 Foi feito para a avaliação N1 do professora Lucília da Puc Goiás da disciplina de Tecnologia e Construção de Software.
 
 # Exemplo
